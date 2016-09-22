@@ -1,0 +1,17 @@
+extends ./layout
+//- Unique content goes here
+block content
+    //- for each object in the posts array
+    for post in posts
+        //- Create elements and add bootstrap classes 
+        section.post
+          .container
+            .row
+              .col-lg-8.col-lg-offset-2.text-center
+                //- Print h2 element with bootstrap classes and the object's title key value
+                h2.section-heading #{post.title}
+                hr.light
+                //- Print paragraph element with bootstrap classes and the object's description key value
+                p.text-faded #{post.description}
+                //- Print an anchor element with a link using the object's title key value
+                a(href='/blog/' + post.title).btn.btn-default.btn-xl Read more!

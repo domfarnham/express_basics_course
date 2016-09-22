@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  //- Brings content within _head.jade into the layout file
+  include ./partials/_head.jade
+
+  body#page-top
+    //- Brings content within _nav.jade into the layout file
+    include ./partials/_nav.jade
+    //- This lets jade know that any page extending the layout can inject its HTML here 
+    block content
+    
+    script(src='/static/js/jquery.js')
+            // Bootstrap Core JavaScript
+            script(src='/static/js/bootstrap.min.js')
+            // Plugins JavaScript
+            script(src='/static/js/jquery.easing.min.js')
+            script(src='/static/js/jquery.fittext.js')
+            script(src='/static/js/wow.min.js')
+            // Custom Theme JavaScript
+            script(src='/static/js/creative.js')
